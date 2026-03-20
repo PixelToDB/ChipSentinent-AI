@@ -1,227 +1,207 @@
-🧠 ChipSentinel AI
-Real-time AI agents for semiconductor trade risk intelligence
-Monitor → Analyze → Act AI-powered multi-agent system for global compliance & supply chain risk detection 
-🚀 Live Concept
+# 🧠 ChipSentinel AI  
+### Real-time AI agents for semiconductor trade risk intelligence
 
-ChipSentinel AI continuously monitors global trade events and instantly tells you:
-👉 “What does this mean for my business — right now?”
+<p align="center">
+  <b>Monitor → Analyze → Act</b><br/>
+  AI-powered multi-agent system for global compliance & supply chain risk detection
+</p>
 
-⚠️ The Problem
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Multi--Agent-blue" />
+  <img src="https://img.shields.io/badge/Frontend-Next.js-black" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-green" />
+  <img src="https://img.shields.io/badge/Hackathon-Airia%20AI-orange" />
+</p>
 
-Global trade is increasingly unpredictable.
+---
 
-Sudden export bans & sanctions
+## 🚀 Demo Preview
 
-Rapid policy changes due to geopolitics
+> Detect → Analyze → Act — in seconds
 
-High dependency on global semiconductor supply chains
+<!-- Add your demo GIF here -->
+<p align="center">
+  <img src="https://via.placeholder.com/800x400?text=Demo+GIF+Here" />
+</p>
 
-💥 Result:
+---
 
-Delayed shipments
+## ⚠️ Problem
 
-Broken supply chains
+Global trade is increasingly volatile due to geopolitical tensions.
 
-Millions in losses
+- Sudden export bans  
+- Semiconductor supply disruptions  
+- Reactive compliance processes  
 
-Most companies today are:
+💥 Businesses often realize issues **too late**, leading to:
+- Delayed shipments  
+- Financial losses  
+- Broken supply chains  
 
-❌ Reactive
+---
 
-❌ Slow to respond
+## 💡 Solution
 
-❌ Lacking real-time intelligence
+ChipSentinel AI is a **multi-agent AI system** that:
 
-💡 The Solution
+- 🛰️ Detects trade restrictions in real-time  
+- 📦 Analyzes internal shipment risks  
+- 🤖 Suggests mitigation strategies instantly  
 
-ChipSentinel AI is a multi-agent AI system that transforms compliance into real-time intelligence.
+👉 Not just alerts — **actionable intelligence**
 
-It doesn’t just detect problems — it explains impact and recommends action instantly.
+---
 
-🧠 Core Architecture
-🤖 AI Agents
-🛰️ Watchman Agent — Detection Layer
+## 🧠 Architecture
 
-Scans global news & regulatory feeds
+```mermaid
+flowchart LR
+    A[🌍 Global News] --> B[🛰️ Watchman]
+    B --> C[📦 Auditor]
+    C --> D[🤖 Strategist]
+    D --> E[📊 Dashboard]
+```
 
-Detects trade restrictions (export bans, sanctions)
+---
 
-Extracts structured insights (material, countries, confidence)
+## 🤖 AI Agents
 
-📦 Auditor Agent — Impact Analysis
+### 🛰️ Watchman Agent — Detection
+- Monitors global news & regulations  
+- Detects trade restrictions  
+- Extracts structured insights  
 
-Matches restrictions with internal shipment data
+### 📦 Auditor Agent — Impact Analysis
+- Matches restrictions with shipment data  
+- Identifies affected shipments  
+- Assigns risk levels  
 
-Identifies affected shipments
+### 🤖 Strategist Agent — Decision Engine
+- Suggests alternative suppliers  
+- Recommends actions  
+- Generates final reports  
 
-Calculates risk levels
+---
 
-🤖 Strategist Agent — Decision Engine
+## 🎯 Features
 
-Suggests alternative suppliers
+- ⚡ Real-time risk detection  
+- 🔁 Multi-agent orchestration  
+- 🧠 AI-driven decision making  
+- 📊 Interactive dashboard  
+- 🧾 Real-time logs panel  
 
-Recommends mitigation strategies
+---
 
-Generates actionable insights
+## 🛠️ Tech Stack
 
-✨ What Makes It Unique
+| Layer | Technology |
+|------|----------|
+| Frontend | Next.js, Tailwind, Framer Motion |
+| Backend | Node.js, Express |
+| AI | Airia AI |
+| API | REST |
 
-🔁 Multi-Agent AI Architecture (not a single LLM)
+---
 
-🌍 Combines external intelligence + internal data
+## 📁 Project Structure
 
-⚡ Real-time decision-making, not just alerts
-
-🧠 Mirrors real-world org workflows (Ops + Compliance + Strategy)
-
-🎥 Demo Experience
-
-When a new regulation appears:
-
-🛰️ Watchman detects restriction
-
-📦 Auditor flags impacted shipments
-
-🤖 Strategist suggests alternatives
-
-📊 UI updates in real time with logs
-
-👉 Feels like a live AI operations system
-
-🛠️ Tech Stack
-Layer	Technology
-Frontend	Next.js, Tailwind CSS, Framer Motion
-Backend	Node.js, Express
-AI Platform	Airia AI (Multi-Agent System)
-Integration	REST APIs
-📁 Project Structure
+```
 chip-sentinel/
-│
 ├── backend/
-│   ├── controllers/
-│   ├── services/
-│   ├── routes/
-│   ├── config/
-│   └── server.js
-│
 ├── frontend/
-│   ├── app/
-│   ├── components/
-│   ├── hooks/
-│   ├── services/
-│   ├── utils/
-│   └── types/
-⚙️ Getting Started
-🔧 Backend Setup
+```
+
+---
+
+## ⚙️ Setup Guide
+
+### 🔧 Backend
+
+```bash
 cd backend
 npm install
-Create .env
-AIRIA_API_KEY=your_api_key
-
-WATCHMAN_URL=your_watchman_endpoint
-AUDITOR_URL=your_auditor_endpoint
-STRATEGIST_URL=your_strategist_endpoint
-Run server
 npm run dev
+```
 
-Server → http://localhost:5000
+Create `.env`:
 
-🎨 Frontend Setup
+```
+AIRIA_API_KEY=your_key
+WATCHMAN_URL=...
+AUDITOR_URL=...
+STRATEGIST_URL=...
+```
+
+---
+
+### 🎨 Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-App → http://localhost:3000
+---
 
-🔗 Connect API
-// frontend/services/api.ts
+## 🔗 API Example
 
-export const analyzeNews = async () => {
-  const res = await fetch("http://localhost:5000/analyze", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      news: "China restricts Gallium exports to US",
-    }),
-  });
+```bash
+POST /analyze
+```
 
-  return res.json();
-};
-🧪 Demo Mode (Optional)
+```json
+{
+  "news": "China restricts Gallium exports to US"
+}
+```
 
-Use mock data for stable demo:
+---
 
-const res = {
-  alert: {...},
-  risk: {...},
-  decision: {...}
-};
-🌍 Scalability
+## 🌍 Scalability
 
-ChipSentinel AI is designed to expand beyond semiconductors:
+ChipSentinel AI can expand into:
 
-💊 Pharmaceuticals
+- 💊 Pharma  
+- ⚡ Energy  
+- 🚢 Logistics  
+- 🏭 Manufacturing  
 
-⚡ Energy
+---
 
-🚢 Logistics
+## 📈 Future Roadmap
 
-🏭 Manufacturing
+- ERP integrations  
+- Predictive analytics  
+- Autonomous decision systems  
 
-Future Roadmap:
+---
 
-ERP integrations
+## 🙌 Acknowledgements
 
-Predictive risk modeling
+- Airia AI  
+- Open-source ecosystem  
+- Hackathon community  
 
-Autonomous compliance agents
+---
 
-📈 Impact
+## ⭐ Support
 
-ChipSentinel AI enables:
+If you like this project:
 
-⚡ Faster decision-making
+👉 Star ⭐ this repo  
+👉 Share feedback  
+👉 Contribute  
 
-📉 Reduced operational risk
+---
 
-🧠 Real-time awareness
+## 🚀 Vision
 
-💼 Enterprise-grade compliance automation
+> From reactive compliance → proactive intelligence  
+> From alerts → autonomous decisions  
 
-🏁 Vision
+---
 
-Move businesses from reactive compliance → proactive intelligence
-
-🙌 Acknowledgements
-
-Airia AI
-
-Open-source ecosystem
-
-Hackathon community
-
-⭐ Support
-
-If you found this useful:
-
-👉 Star ⭐ this repo
-👉 Share feedback
-👉 Contribute ideas
-
-🚀 Built for the future of AI-driven operations
-🔥 If You Want Even More Premium
-
-I can upgrade further with:
-
-📸 Screenshot section (your UI)
-
-🎥 Demo GIF (auto-play in README)
-
-🧠 API docs (Swagger-style)
-
-🏆 Badges (hackathon, build, version)
-
-Just say:
-👉 “Add screenshots + badges + demo GIF section”
+# 🔥 Built for the future of AI-driven operations
